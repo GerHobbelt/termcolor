@@ -52,3 +52,11 @@ set (CPACK_PACKAGE_DESCRIPTION_SUMMARY "print colored messages on terminal
 )
 
 include (CPack)
+
+find_package(catkin REQUIRED)
+
+catkin_package(
+    INCLUDE_DIRS include
+)
+
+add_subdirectory(include)
