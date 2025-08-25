@@ -38,8 +38,12 @@
 
 using namespace termcolor;
 
+#if defined(BUILD_MONOLITHIC)
+#define main termcolor_test_main
+#endif
 
-int main(int /*argc*/, char** /*argv*/)
+extern "C"
+int main(void)
 {
     // test truecolors
     std::cout << color<181, 137, 0> << "#b58900" << reset << std::endl;
